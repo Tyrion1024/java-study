@@ -1,12 +1,11 @@
 class Test {
   public static void main (String[] args) {
     int a = 1;
-    for (int i = 0; i < 1000; i++) {
-      a++;
-    }
-    System.out.println(a);
+    int b = a;
+    a = 3;
+    System.out.println("a" + a);
+    System.out.println("b" + b);
   }
-
 
   private static String getType(Object a) {
     return a.getClass().toString();
