@@ -3,6 +3,15 @@ public class Persion {
     public int age;
     public String sex;
 
+
+
+    final Boolean hasSoul = true;
+
+    public static void testStatic () {
+        System.out.println("Persion类的静态方法testStatic");
+    }
+
+
     public void eat () {
         System.out.println(name + "吃了一坨屎");
     }
