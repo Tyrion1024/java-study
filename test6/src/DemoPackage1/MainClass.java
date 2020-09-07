@@ -1,12 +1,16 @@
+package DemoPackage1;
+
+import DemoPackage1.YellowPersion;
+
 public class MainClass {
     public static void main (String[] args) {
 //        新建一个类，构造函数的练习，以及属性和方法的调用
 //
-//        Persion a = new Persion();
+//        DemoPackage1.Persion a = new DemoPackage1.Persion();
 //        a.age = 50;
 //        a.name = "小伙a";
 //        a.sex = "男";
-//        Persion b = new Persion("小伙b", 30, "女");
+//        DemoPackage1.Persion b = new DemoPackage1.Persion("小伙b", 30, "女");
 //        System.out.println("a：" + a.name + " - " + a.sex + " - " + a.age);
 //        System.out.println("b：" + b.name + " - " + b.sex + " - " + b.age);
 //        b.eat(a.name);
