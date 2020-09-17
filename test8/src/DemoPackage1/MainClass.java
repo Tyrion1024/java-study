@@ -1,17 +1,41 @@
 package DemoPackage1;
 
+import java.lang.reflect.Array;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Objects;
 
 public class MainClass {
     public static void main(String[] args) throws ParseException {
+//        systemTest();
 //        objectTest();
 //        dateTest();
 //        dataFormatTest();
 //        calendarTest();
+//        stringBuilderTest();
+    }
+
+    private static void systemTest() {
+        // currentTimeMillis返回以毫秒为单位的当前时间
+        long start = System.currentTimeMillis();
+        for (int i = 0; i < 9999; i++) {
+            System.out.print(i);
+        }
+        long end = System.currentTimeMillis();
+        System.out.println("");
+        System.out.println("for循环从0到9998,并打印出每个数字。一共用时为：" + (end - start) + "毫秒");
+
+
+
+        // arrayCopy可以将某数组的某些元素赋值到其他数组上
+        int[] arr1 = {1,2,3,4,5};
+        int[] arr2 = {6,7,8,9,0};
+        System.out.println("未经arrayCopy处理前arr2数组是：" + Arrays.toString(arr2));
+        System.arraycopy(arr1, 0 ,arr2, 1, 4); // 用源数组（arr1）的下标为0（srcPos）开始数的4（length）个元素来替代目标数组（arr2）的下标为1（destPos）开始数的4(length)个元素。arr2即为处理好的数组！
+        System.out.println("经arrayCopy处理后arr2数组是：" + Arrays.toString(arr2));
     }
 
     static void objectTest () {
@@ -80,5 +104,18 @@ public class MainClass {
         System.out.println("----------- 可以使用Calendar对象提供的getTime()方法将日历对象转化为日期对象，c.getTime()得到的结果为：" + c.getTime());
 
 
+    }
+
+    static void stringBuilderTest () {
+        // StringBuilder类
+        String a = "abc";
+        StringBuilder str = new StringBuilder(a); // 通过StringBuilder的构造函数将String类型转换为StringBuilder类型
+        str.append(true);
+        str.append(0.51);
+        str.append(true);
+        str.append("555");
+        str.append(false).append(9);
+        a = str.toString(); // StringBuilder类型转化为String类型可以使用StringBuilder对象的toString()
+        System.out.println(a);
     }
 }
